@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+    <link rel="stylesheet" href="/CSS/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <!-- styling css:- -->
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        body{
+            background-attachment: fixed;
+            background-size: cover;
+            background-image: url(/Images/cover2.png);
+        }
+
+        .mainCard{
+            padding-top: 8%;
+            padding-left: 30%;
+            opacity: 0.7;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container mainCard">
+        
+       
+        <div class="card ml-4 pt-3 mt-5" style="width: 40%; background-color:rgb(214, 152, 71); color: darkred;">
+            <form action="/welcome" method="POST">
+                <label for="name"> Please Enter Your Name</label>
+                <div class="input-group mb-2 p-2" style="width: 97%;">
+                    <input type="text" name="name" class="form-control " placeholder="Your Name" aria-label="Your Name" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-danger" type="submit" id="button-addon2">Submit</button>
+                  </div>
+
+        </form>
+    </div>
+    </div>
+</body>
+</html>

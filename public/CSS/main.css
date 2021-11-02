@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* -----------------------welcomePg.ejs---------------------- */
+.welcomeBody{
+    background-image: url(/Images/diwali2.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+/* -----------------------Wishes.ejs---------------------- */
+
+/* wishes.ejs body:=====> pg2 */
+.wishesBody{
+display: flex;
+align-items: center;
+justify-content: center;
+height: 87vh;
+background-image: url(/Images/cover.png); 
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;  
+}
+
+.cardgreeting{
+    position: relative;
+    width: 250px;
+    height: 350px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(25000px);
+    transition: 1s;
+}
+.cardgreeting:hover{
+    transform: perspective(25000px)rotate(5deg);
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2),0 10px 100px rgba(0, 0,0,0.4);
+}
+.cardgreeting:hover .cardFront{
+    transform: rotateY(-160deg);
+}
+.cardgreeting:hover .happy{
+    visibility: hidden;
+}
+
+.cardFront{
+    position: relative;
+    background-color: #fff;
+    width: 280px;
+    height: 380px;
+    overflow: hidden;
+    transform-origin: left;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2) 30px 0 50px rgba(0, 0,0,0.4);
+    transition: 0.6s;
+}
+.happy{
+    font-family:Tahoma, sans-serif;
+    text-align: center;
+    margin:30px;
+    background-image:linear-gradient(120deg, #f6b265ad 0%, #771116 100%);
+    transition: 0.1s;
+
+}
+.fireworks{
+    position: absolute;
+
+}
+.fireworkOne, .fireworkTwo, .fireworkThree{
+    position:absolute;
+    width: 90px;
+    height: 95px;
+    border-radius: 50%;
+}
+.fireworkOne{
+    /* background-color: rgba(239,71,111,0.7); */
+    /* background-image: url(/Images/diwali-lamp.jpg); */
+    background-image: url(/Images/diwali-diwali-candle.gif);
+    left:10px;
+    top:55px;
+
+}
+.fireworkTwo{
+    background-image: url(/Images/diwali-diwali-candle.gif);
+    left:96px;
+    top:38px;
+}
+.fireworkThree{
+    background-image: url(/Images/diwali-diwali-candle.gif);
+    left:177px;
+    top:57px;
+}
+
+.cardInside{
+    position: absolute;
+    background-color: rgb(71, 16, 16);
+    top:0;
+    left:0;
+    width: 280px;
+    height: 380px;
+    box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2);
+    z-index: -1;
+}
+p{
+    font-family:'Merienda', cursive;
+    margin: 44px;
+    color: rgb(131, 122, 122);
+}
+
+.ByName{
+    position: absolute;
+    left: 150px;
+    top: 281px;
+    color: rgb(131, 122, 122);
+}
+.back{
+    font-family: 'Segoe UI', Tahoma,sans-serif;
+    color: rgb(160, 156, 156);
+    text-align: center;
+    margin: 30px;
+    outline-color: #333;
+    outline-style: dotted;
+}
+
