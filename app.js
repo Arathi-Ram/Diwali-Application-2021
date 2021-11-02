@@ -42,8 +42,8 @@ app.post('/welcome',(req,res)=>{
 });
 
 app.post('/wishes',async(req,res)=>{
-    const name = req.body.urName;
-    const frndName = req.body.frndName;
+    // const name = req.body.urName;
+    // const frndName = req.body.frndName;
     const frndEmail = req.body.frndEmail;
 
     let testAccount = await nodemailer.createTestAccount();
@@ -78,18 +78,18 @@ app.post('/wishes',async(req,res)=>{
             // res.send('Email sent: '+info.response);
             console.log("Message sent: %s",info.messageId);
             console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-            let user = new UserData({
-                name,
-                frndName,
-                frndEmail
+            let users = new UserData({
+                name:req.body.urName,
+                frndName:req.body.frndName,
+                frndEmail:req.body.frndEmail
             });
-             user.save();
+             users.save();
             res.render('wishes',
             {
                 title:"Greetings For Your Friend!",
-                name:name,
-                frndName:frndName,
-                frndEmail:frndEmail,
+                name:users.name,
+                frndName:users.frndName,
+                frndEmail:users.frndEmail,
                 success:'Wishes Reached'
             });
         }
